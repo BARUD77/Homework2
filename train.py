@@ -21,7 +21,7 @@ def train_model_simple(
     if use_plateau_lr:
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
             optimizer, mode="min", factor=lr_factor,
-            patience=lr_patience, threshold=min_delta, min_lr=min_lr, verbose=True
+            patience=lr_patience, threshold=min_delta, min_lr=min_lr
         )
 
     for epoch in range(num_epochs):
